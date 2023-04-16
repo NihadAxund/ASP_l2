@@ -1,0 +1,161 @@
+﻿@model Lesson2.Models.ADDPersonViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <style>
+        body,
+        html {
+            background-color: #ebecf0;
+        }
+
+        body,
+        p,
+        input,
+        select,
+        textarea,
+        button {
+            font-family: "Montserrat", sans-serif;
+            letter-spacing: -0.2px;
+            font-size: 16px;
+        }
+
+        div,
+        p {
+            color: #babecc;
+            text-shadow: 1px 1px 1px #fff;
+        }
+
+        form {
+            padding: 16px;
+            width: 320px;
+            margin: 0 auto;
+        }
+
+        .segment {
+            padding: 32px 0;
+            text-align: center;
+        }
+
+        button,
+        input,
+        textarea {
+            border: 0;
+            outline: 0;
+            font-size: 16px;
+            border-radius: 320px;
+            padding: 16px;
+            background-color: #ebecf0;
+            text-shadow: 1px 1px 0 #fff;
+        }
+
+        textarea {
+            width: 300px;
+            height: 100px;
+            resize: none;
+        }
+
+        label,
+        textarea {
+            display: block;
+            margin-bottom: 24px;
+            width: 100%;
+        }
+
+        input,
+        textarea {
+            margin-right: 8px;
+            box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+            width: 100%;
+            box-sizing: border-box;
+            transition: all 0.2s ease-in-out;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+
+            input:focus {
+                box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+            }
+
+        button {
+            color: #61677c;
+            font-weight: bold;
+            box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+            button:hover {
+                box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+            }
+
+            button:active {
+                box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+            }
+
+            button .icon {
+                margin-right: 8px;
+            }
+
+            button.unit {
+                border-radius: 8px;
+                line-height: 0;
+                width: 48px;
+                height: 48px;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 8px;
+                font-size: 19.2px;
+            }
+
+            button.unit .icon {
+                margin-right: 0;
+            }
+
+            button.red {
+                display: block;
+                width: 100%;
+                color: #ae1100;
+            }
+    </style>
+        <title>
+            ADD
+        </title>
+    </head>
+    <body>
+        <div class="segment">
+            <h1>ADD PERSON  </h1>
+        </div>
+    <form asp-controller="Home" asp-action="AddPerson" method="post">
+
+
+        <label asp-for="Person.Name">
+            <input asp-for="Person.Name" type="text" pattern="[a-zA-Z]+" minlength="2" placeholder="Name" required />
+        </label>
+        <label asp-for="Person.Surname">
+            <input asp-for="Person.Surname" type="password" pattern="[a-zA-Z]+" minlength="3" placeholder="Surname" required />
+        </label>
+        <label asp-for="Person.ImageUrl">
+            <input asp-for="Person.ImageUrl" placeholder="Image Url()" pattern="https?://(?:[a-z0-9-]+\.)+[a-z]{2,}(?:/[^/#?]+)+\.(?:jpe?g|gif|png)$" minlength="8" required />
+        </label>
+        <label asp-for="Person.Age">
+            <input asp-for="Person.Age" placeholder="Age" min="18" max="99" value="18" required   />
+        </label>
+        <div style="display:flex; align-items:center; justify-content:center; margin:15px; margin-top:0;">
+                ABOUT
+        </div>
+        <textarea asp-for="Person.About" placeholder="About" min="5" required>
+
+        </textarea>
+        <button class="red" type="submit"><i class="icon ion-md-lock"></i> Log in</button>
+    </form>
+    </body>
+</html>
+
+
