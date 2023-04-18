@@ -48,32 +48,37 @@
             background-color: rgba(39, 39, 39, 0.724);
         }
 
+        img {
+            width: 100% !important;
+            height: 75% !important;
+        }
+
         .card {
             width: 200px !important;
             height: 250px !important;
             margin: 10px !important;
+            overflow: hidden;
         }
 
             .card:hover {
-                box-shadow: rgb(0, 0, 0) 0px 20px 80px -30px, rgba(255, 255, 255, 0.3) 0px 30px 60px -30px, rgba(255, 255, 255, 0.35) 0px -2px 6px 0px inset;
+                box-shadow: rgb(0, 0, 0) 0px 20px 80px -30px, rgba(255, 255, 255, 0.3) 0px 100px 100px -50px, rgba(255, 255, 255, 0.35) 0px 2px 15px 0px inset;
+                background-color: rgba(29, 29, 29, 0.737);
+                color: white;
             }
 
         ::-webkit-scrollbar {
             width: 10px;
         }
 
-        /* Kaydırma çubuklarının arkaplan rengi */
         ::-webkit-scrollbar-track {
             background: none;
         }
 
-        /* Kaydırma çubukları */
         ::-webkit-scrollbar-thumb {
             background: #ffffff;
             border-radius: 20px;
         }
 
-            /* Kaydırma çubuklarının üzerine gelindiğinde */
             ::-webkit-scrollbar-thumb:hover {
                 background: rgb(230, 230, 173);
             }

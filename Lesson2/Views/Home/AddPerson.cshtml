@@ -136,10 +136,10 @@
 
 
         <label asp-for="Person.Name">
-            <input asp-for="Person.Name" type="text" pattern="[a-zA-Z]+" minlength="2" placeholder="Name" required />
+            <input asp-for="Person.Name" pattern="[a-zA-Z]+" minlength="2" placeholder="Name" required />
         </label>
         <label asp-for="Person.Surname">
-            <input asp-for="Person.Surname" type="password" pattern="[a-zA-Z]+" minlength="3" placeholder="Surname" required />
+            <input asp-for="Person.Surname"  pattern="[a-zA-Z]+" minlength="3" placeholder="Surname" required />
         </label>
         <label asp-for="Person.ImageUrl">
             <input asp-for="Person.ImageUrl" placeholder="Image Url()" pattern="https?://(?:[a-z0-9-]+\.)+[a-z]{2,}(?:/[^/#?]+)+\.(?:jpe?g|gif|png)$" minlength="8" required />
