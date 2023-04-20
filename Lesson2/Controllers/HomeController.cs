@@ -56,7 +56,6 @@ namespace Lesson2.Controllers
         [HttpPost]
         public ActionResult ButtonClick()
         {
-         
             return Redirect("/home/AddPerson");
         }
     }
