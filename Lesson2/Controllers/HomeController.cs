@@ -31,6 +31,7 @@ namespace Lesson2.Controllers
         }
 
         [HttpPost]
+
         public async  Task<IActionResult> AddPerson(ADDPersonViewModel vw)
         {
            if(ModelState.IsValid)
@@ -53,7 +54,9 @@ namespace Lesson2.Controllers
             var value = new PersonsListViewModel(Data);
             return View(value);
         }
+
         [HttpPost]
+
         public ActionResult ButtonClick()
         {
             return Redirect("/home/AddPerson");
