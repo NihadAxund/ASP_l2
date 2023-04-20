@@ -57,8 +57,7 @@ namespace Lesson2.Controllers
         [HttpPost]
         public ActionResult ButtonClick()
         {
-            ViewBag.Message = "Butona tıklandı.";
-          
+         
             return Redirect("/home/AddPerson");
         }
     }
