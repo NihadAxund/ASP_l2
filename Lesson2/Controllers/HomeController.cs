@@ -35,9 +35,8 @@ namespace Lesson2.Controllers
         {
            if(ModelState.IsValid)
            {
-                //JsonWrite.WriteAsync(vw);
                 var result = await JsonWrite.WriteAsync(vw.Person);
-                var z = vw.Person;
+                //var z = vw.Person;
 
                 if (result)
                 {
